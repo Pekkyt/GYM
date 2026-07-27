@@ -4,7 +4,7 @@ from core.config import settings
 
 
 class DatabaseSettings:
-    def __init__(self, db_url, db_echo):
+    def __init__(self, db_url, db_echo: bool = False):
         self.engine = create_async_engine(
             db_url,
             echo=db_echo,
